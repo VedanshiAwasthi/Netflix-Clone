@@ -1,0 +1,134 @@
+$bg:rgb(1,1,1);
+
+.banner{
+    height: 600px;
+    background-color: $bg;
+    //  border: 2px solid yellowgreen;
+     background-size: cover;
+    background-image: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 3rem;
+    box-sizing: border-box;
+    
+    &::after{
+        content:"";
+        width:100%;
+        height:100%;
+        position: absolute;
+        background: $bg;
+        top:0%;
+        left:0%;
+        opacity:0.4
+    }
+
+    >h1,p{
+        // margin-left: 4rem;
+        color:white;
+        font-size: 5rem;
+        width:40%;
+        z-index:10;
+    }
+
+    >p{
+        font-size: 1.2rem;
+    }
+    
+    .btn{
+        display: flex;
+        // margin-left: 4rem;
+
+        >button{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width:9rem;
+            outline: none;
+            padding:1rem;
+            font-size: 1rem;
+            border-radius: 5px;
+            background-color: white;
+            border: none;
+            z-index: 10;margin: 1rem;
+            cursor: pointer;
+            transition: transform 0.2s;
+
+            &:hover{
+                transform: translateY(-4px);
+                opacity: 0.8;
+            }
+
+            &:nth-child(2){
+                background-color: rgb(61, 61, 61);
+                color:white;
+            }
+
+            &:nth-child(1){
+                background-color: white;
+                color:black;  
+            }
+            svg{
+                font-size: 1.5rem;
+                margin:0 10px;
+            }
+        }
+    }
+
+    
+}
+
+.row{
+    padding: 1rem;
+    background-color: $bg;
+
+    >h2{
+        margin: 0.3rem;
+        font-weight: 400;
+    }
+
+    >div{
+        display: flex;
+        overflow-x: auto;
+        // justify-content: center;
+    }
+
+}
+
+.cards{
+    width:200px;
+    cursor: pointer;
+    margin: 0.3rem;
+    transition: transform 0.5s;
+
+    &:hover{
+        transform: translateY(-10px) scale(1.05);
+    }
+}
+
+.genreBox{
+    overflow-x:auto;
+    display: flex;
+    height:200px;
+    background-color: $bg;
+    // border: 2px solid yellowgreen;
+    >a{
+        transition: all 0.5s;
+        text-align: center;
+        min-width: 10rem;
+        color:black;
+        padding: 1rem 0;
+        background-color: white;
+        margin:1rem;
+        border-radius: 5px;
+        border: 2px solid pink;
+
+        &:hover{
+            background-color: rgb(236,236,236);
+        }
+    }
+
+  
+}
